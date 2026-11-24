@@ -1,0 +1,152 @@
+body
+{
+    display:flex;
+    overflow:hidden;
+    flex-direction:column;
+    justify-content:center;
+}
+.back
+{
+    position:relative;
+    width:120px;
+    height:50px;
+    background-color:rgb(151,176,250);
+    border-radius:30px;
+    font-size:18px;
+    font-weight:500;
+    font-family:"Chiron GoRound TC",sans-serif;
+    color:rgb(0,0,0);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    top:10px;
+    left:15px;
+    cursor:pointer;
+}
+.upperphone
+{
+    width:500px;
+    height:480px;
+    background-color:rgb(184,201,252);
+    border:7px solid rgb(151,176,250);
+    border-radius:40px 40px 0px 0px;
+    position:relative;
+    left:calc(50% - 280px);
+    overflow-y:scroll;
+    overflow-x:hidden;
+    bottom:50px;
+}
+.onmessage
+{
+    position:relative;
+    left:20px;
+}
+.photo
+{
+    width:60px;
+    height:60px;
+    background-color:rgb(255,255,255);
+    border-radius:50%;
+    overflow:hidden;
+    border:2px solid rgb(97,136,255);
+}
+.nopicture
+{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+}
+.namediv
+{
+    position:relative;
+    width:100px;
+    display:flex;
+    justify-content:center;
+    left:35px;
+    color:rgb(0,0,0);
+    bottom:60px;
+    font-size:14px;
+    font-weight:500;
+    font-family:"Chiron GoRound TC",sans-serif;
+}
+
+.say
+{
+    width:130px;
+    background-color:rgb(255,255,255);
+    border-radius:20px;
+    position:relative;
+    bottom:50px;
+    left:70px;
+    padding:7px;
+    font-size:18px;
+    font-weight:500;
+    font-family:"Chiron GoRound TC",sans-serif;
+    color:rgb(0,0,0);
+}
+.text
+{
+    position:relative;
+    width:513px;
+    height:80px;
+    background-color:rgb(151,176,250);
+    left:calc(50% - 280px);
+    bottom:78px;
+    border-radius:0px 0px 40px 40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-wrap:break-word;
+}
+.usertext
+{
+    position:absolute;
+    bottom:30px;
+    left:35px;
+    font-size:14px;
+    font-weight:500;
+    font-family:"Chiron GoRound TC",sans-serif;
+    color:rgb(0,0,0);
+}
+.select
+{
+    position:relative;
+
+}
+.con
+{
+    position:relative;
+    outline:none;
+    resize:none;
+    width:300px;
+    height:40px;
+    top:5px;
+}
+.send
+{
+    position:relative;
+    width:80px;
+    height:40px;
+    outline:none;
+    border:none;
+    background-color:rgb(97,136,255);
+    border-radius:20px;
+    bottom:10px;
+    left:10px;
+    cursor:pointer;
+}
+.ownmessage
+{
+    position:relative;
+    left:320px;
+    width:130px;
+    background-color:rgb(20,255,52);
+    border-radius:30px;
+    padding:8px;
+    font-size:18px;
+    font-weight:500;
+    font-family:"Chiron GoRound TC",sans-serif;
+    color:rgb(0,0,0);
+    bottom:20px;
+
+}

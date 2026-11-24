@@ -1,0 +1,139 @@
+body
+{
+	overflow:hidden;
+	display:flex;
+	justify-content:center;
+	background-color:rgb(115,144,230);
+}
+.btext
+{
+	color:rgb(84,105,168,0.1);
+	position:absolute;
+	font-size:300px;
+	top:-185px;
+	z-index:-1;
+}
+.all
+{
+	position:absolute;
+	left:calc(50% - 120px);
+	margin:0 auto;
+	top:100px;
+}
+.welcome
+{
+	position:absolute;
+	width:250px;
+	height:65px;
+}
+.weltext
+{
+	position:absolute;
+	font-size:50px;
+	font-weight:900;
+	font-family:"Chiron GoRound TC",sans-serif;
+	top:-10px;
+}
+.nametext
+{
+	position:absolute;
+	font-size:20px;
+	font-weight:500;
+	font-family:"Chiron GoRound TC",sans-serif;
+	top:118px;
+	left:-90px;
+}
+.passtext
+{
+	position:absolute;
+	font-size:20px;
+	font-weight:500;
+	font-family:"Chiron GoRound TC",sans-serif;
+	top:160px;
+	left:-50px;
+}
+.pchdiv
+{
+	position:absolute;
+	width:100px;
+	height:30px;
+}
+.checktext
+{
+	position:absolute;
+	font-size:20px;
+	font-weight:500;	
+	font-family:"Chiron GoRound TC",sans-serif;
+	top:162px;
+	left:-90px;
+}
+.accountname
+{
+	position:absolute;
+	top:120px;
+	height:15px;
+	border:1px solid rgb(0,0,0);
+	border-radius:5px;
+	left:20px;
+}
+.password
+{
+	position:absolute;
+	top:160px;
+	height:15px;
+	border:1px solid rgb(0,0,0);
+	left:20px;
+	border-radius:5px;
+}
+.passwordcheck
+{
+	position:absolute;
+	top:200px;
+	height:15px;
+	border:1px solid rgb(0,0,0);
+	border-radius:5px;
+	left:20px;
+}
+.submit
+{
+	position:absolute;
+	top:260px;
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-size:15px;
+	font-weight:600;
+	left:55px;
+	width:60px;
+	height:30px;
+}
+.aldiv
+{
+	position:absolute;
+	height:15px;
+	width:270px;
+}
+.already
+{
+	position:absolute;
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-size:30px;
+	font-weight:600;
+	left:-25px;
+	top:239px;
+}
+.login
+{
+	position:absolute;
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-weight:700;
+	font-size:21px;
+	top:380px;
+	left:40px;
+	height:40px;
+	width:100px;
+	border-right:2px solid rgb(84,105,168);
+	border-bottom:2px solid rgb(84,105,168);
+	cursor:pointer;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}

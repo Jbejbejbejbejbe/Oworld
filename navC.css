@@ -1,0 +1,98 @@
+.navall a
+{
+	text-decoration:none;
+	color:inherit;
+}
+.navall li
+{
+	list-style:none;
+}
+.navall
+{
+	position:fixed;
+	width:100%;
+	height:90px;
+	background-color:rgb(235,251,255);
+	box-shadow:1px 10px 10px 0px rgb(204,206,207);
+	top:-30px;
+	left:-30px;
+}
+.wname
+{
+	position:absolute;
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-weight:900;
+	top:32px;
+	left:45px;
+	font-size:35px;
+	color:rgb(81,117,224);
+}
+.aall
+{
+	position:absolute;
+	display:flex;
+	left:220px;
+	width:60%;
+	justify-content:space-between;
+	top:41px;
+
+}
+.a
+{
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-weight:500;
+	font-size:17px;
+}
+.adiv
+{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	border-radius:10px;
+	width:110px;
+	height:25px;
+	cursor:pointer;
+}
+.adiv:hover
+{
+	box-shadow:0px 0px 0px 2px rgb(151,176,250);	
+}
+.sixdiv
+{
+	width:120px;
+	height:50px;
+	background-color:rgb(151,176,250);
+	position:relative;
+	left:1030px;
+	top:25px;
+	border-radius:35px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	z-index:10;
+}
+.sixdiv a
+{
+	position:absolute;
+}
+.logout
+{
+	position:absolute;
+	width:120px;
+	height:50px;
+	background-color:rgb(255,255,255);
+	border-width:0px 3px 3px 3px;
+	border-color:transparent rgb(219,219,219) rgb(219,219,219) rgb(219,219,219);
+	border-style:solid solid solid solid;
+	border-radius:20px;
+	box-shadow:inset 0px 0px 5px 5px rgb(219,219,219);
+	font-size:17px;
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-weight:500;
+	color:rgb(0,0,0);
+	cursor:pointer;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	top:50px;
+}

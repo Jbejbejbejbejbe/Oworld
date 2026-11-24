@@ -1,0 +1,174 @@
+body
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.thediv
+{
+    position:absolute;
+    width:250px;
+    height:250px;
+    z-index:12;
+    background-color:rgb(212,208,207);
+    border:3px solid rgb(171,168,167);
+    border-radius:15px;
+    left:calc(50% - 150px);
+    overflow:hidden;
+}
+.photo
+{
+    position:absolute;
+    width:1px;
+    height:1px;
+    z-index:1;
+    overflow:hidden;
+    border:none;
+    opacity:0;
+}
+.phototext
+{
+    position:absolute;
+   
+}
+.gogo
+{
+    position:absolute;
+    top:250px;
+    left:calc(50% - 75px);
+    width:180px;
+    height:30px;
+}
+.label
+{
+    position:absolute;
+    font-family:"Chiron GoRound TC",sans-serif;
+    font-size:23px;
+}
+.namel
+{
+    top:350px;
+    left:calc(50% - 160px);
+}
+.input
+{
+    position:absolute;
+    border:3px solid rgb(39,230,156);
+    border-radius:2px;
+    outline:none;
+}
+.input:focus
+{
+    border:3px solid rgb(32,199,135);
+}
+.name
+{
+    top:352px;
+    left:calc(50% - 60px);
+}
+.ps
+{
+    font-size:15px;
+    top:340px;
+    left:calc(50% + 110px);
+}
+.genderl
+{
+    top:390px;
+    left:calc(50% - 160px);
+}
+.gender
+{
+    top:392px;
+    left:calc(50% - 60px);
+}
+.birthdayl
+{
+    top:430px;
+    left:calc(50% - 160px);
+}
+.birthday
+{
+    top:432px;
+    left:calc(50% - 60px);
+}
+.adjl
+{
+    top:470px;
+    left:calc(50% - 160px);
+}
+.adj
+{
+    top:472px;
+    left:calc(50% - 60px);
+}
+.area
+{
+    position:absolute;
+    border:3px solid rgb(39,230,156);
+    border-radius:2px;
+    outline:none;
+    resize:none;
+    width:220px;
+    height:150px;
+}
+.area:focus
+{
+    border:3px solid rgb(32,199,135);
+}
+.hobbyl
+{
+    top:510px;
+    left:calc(50% - 160px);
+}
+.hobby
+{
+    top:512px;
+    left:calc(50% - 60px);
+}
+.abilityl
+{
+    top:700px;
+    left:calc(50% - 160px);
+}
+.ability
+{
+    top:702px;
+    left:calc(50% - 60px);
+}
+.storyl
+{
+    top:890px;
+    left:calc(50% - 160px);
+}
+.story
+{
+    top:892px;
+    left:calc(50% - 60px);
+}
+.othersl
+{
+    top:1080px;
+    left:calc(50% - 160px);
+}
+.others
+{
+    top:1082px;
+    left:calc(50% - 60px);
+}
+.submit
+{
+    position:absolute;
+    width:100px;
+    height:50px;
+    background-color:rgb(39,230,156);
+    border:none;
+    outline:none;
+    top:1260px;
+    right:30px;
+    border-radius:40px;
+    cursor:pointer;
+    font-family:"Chiron GoRound TC",sans-serif;
+    font-weight:500;
+    font-size:18px;
+}

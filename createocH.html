@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang=""zh-Hant-TW>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="createocC.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <form id="oneocdata" name="oneocdata" enctype="multipart/form-data">
+            <label for="photo" class="photol label">
+                <div class="thediv">
+                <img src="" class="img">
+                </div>
+                <br><div class="gogo"><p class="phototext label">上傳圖片吧</p></div>
+                <input type="file" accept="image/*" name="photo" class="photo" id="photo">
+            </label>
+            <br>
+            <label for="name" class="namel label">名字</label>
+            <input type="text" name="name" class="name input data" id="name">
+            <p class="label ps">（必填。）</p>
+            <br>
+            <label for="gender" class="genderl label">性別</label>
+            <input type="text" name="gender" class="gender input data" id="gender">
+            <br>
+            <label for="birthday" class="birthdayl label">生日</label>
+            <input type="text" name="birthday" class="birthday input data" id="birthday">
+            <br>
+            <label for="adj" class="adjl label">性格</label>
+            <input type="text" name="adj" class="adj input data" id="adj">
+            <br>
+            <label for="hobby" class="hobbyl label">興趣</label>
+            <textarea name="hobby" class="hobby area data" id="hobby"></textarea>
+            <br>
+            <label for="ability" class="abilityl label">擅長</label>
+            <textarea name="ability" class="ability area data" id="ability"></textarea>
+            <br>
+            <label for="story" class="storyl label">經歷</label>
+            <textarea name="story" class="story area data" id="story"></textarea>
+            <br>
+            <label for="others" class="othersl label">其他</label>
+            <textarea name="others" class="others area data" id="others"></textarea>
+            <br>
+            <button type="submit" class="submit">儲存</button>
+        </form>
+        <script src="createocJ.js" type="module"></script>
+    </body>
+</html>

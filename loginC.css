@@ -1,0 +1,114 @@
+body
+{
+	overflow:hidden;
+	background-color:rgb(115,144,230);
+	display:flex;
+	justify-content:center;
+}
+.btext
+{
+	position:absolute;
+	font-size:380px;
+	color:rgba(84,105,168,0.1);
+	z-index:-1;
+	top:-300px;
+}
+.all
+{
+	position:absolute;
+	left:calc(50% - 120px);
+	margin:0 auto;
+	top:120px;
+}
+.tdiv
+{
+	position:absolute;
+	height:65px;
+	width:250px;
+}
+.title
+{
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-weight:900;
+	position:absolute;
+	font-size:50px;
+}
+.atext
+{
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-weight:500;
+	position:absolute;
+	font-size:20px;
+	top:120px;
+	left:-50px
+}
+.ptext
+{
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-weight:500;
+	position:absolute;
+	font-size:20px;
+	top:160px;
+	left:-50px;
+}
+.account
+{
+	position:absolute;
+	top:120px;
+	height:15px;
+	border:1px solid rgb(0,0,0);
+	border-radius:5px;
+	left:20px;
+}
+.password
+{
+	position:absolute;
+	top:160px;
+	height:15px;
+	border:1px solid rgb(0,0,0);
+	border-radius:5px;
+	left:20px;
+}
+.submit
+{
+	position:absolute;
+	top:225px;
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-size:15px;
+	left:65px;
+	width:60px;
+	height:30px;
+	font-weight:600;
+}
+.bdiv
+{
+	position:absolute;
+	height:15px;
+	width:220px;
+}
+.become
+{
+	position:absolute;
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-weight:600;
+	font-size:30px;
+	left:3px;
+	top:225px;
+}
+.signup
+{
+	position:absolute;
+	font-family:"Chiron GoRound TC",sans-serif;
+	font-weight: 700;
+	font-size:21px;
+	top:340px;
+	left:55px;
+	height:40px;
+	width:100px;
+	border-right:2px solid rgb(84,105,168);
+	border-bottom:2px solid rgb(84,105,168);
+	cursor:pointer;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
