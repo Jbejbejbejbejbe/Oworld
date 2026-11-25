@@ -56,7 +56,7 @@ login.post("/api/checklogin",async(req,res)=>{
             res.status(500).json({success:false,message:"失敗 "+error});
         }
 });
-export login as F;
+export {login as F};
 themongoose.on("error",function(){
     console.log("資料庫連線失敗");
 });
