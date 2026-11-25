@@ -1,6 +1,7 @@
 {
   "name": "oc",
   "version": "1.0.0",
+  "engines":">=26.13.0 <27.0.0";
   "description": "",
   "keywords": [],
   "license": "ISC",
@@ -8,7 +9,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build":"npm install",
+    "start":"node server.js"
   },
   "dependencies": {
     "acorn": "^8.14.0",
