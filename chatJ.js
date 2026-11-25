@@ -113,7 +113,7 @@ function appendchat(thephoto,thespeaker,theuoro,themessage)
             {
                 resetneeded=true;
             }
-            if(reone[i].useroroc==="oc"&&Object.hasOwn(reone[i],picture))
+            if(reone[i].useroroc==="oc"&&Object.hasOwn(reone[i],"picture"))
             {
                 appendchat(reone[i].picture,reone[i].speaker,reone[i].useroroc,reone[i].message);
             }
@@ -145,7 +145,7 @@ function appendchat(thephoto,thespeaker,theuoro,themessage)
                         {
                             resetneeded=true;
                         }
-                        if(reone[j].useroroc==="oc"&&Object.hasOwn(reone[j],picture))
+                        if(reone[j].useroroc==="oc"&&Object.hasOwn(reone[j],"picture"))
                         {
                             appendchat(reone[j].picture,reone[j].speaker,reone[j].useroroc,reone[j].message);
                         }
@@ -197,7 +197,7 @@ message.addEventListener("submit",async function(event){
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(messagedata)
         });
-        appendchat("xx",select.value,"xx",con.value);
+        appendchat("",select.value,"xx",con.value);
         if(!responsethree.ok)
         {
             console.log("fetch three failed");
