@@ -6,27 +6,9 @@ dotenv.config();
 const uri=process.env.MONGODBLINK;
 const port=process.env.PORT;
 const oclink=express.Routers();
-const ocdata=new mongoose.Schema({
-    picture:{type:String},
-    user:{
-        type:String,
-        required:true
-    },
-    name:{
-        type:String,
-        required:true
-    },
-    gender:{type:String},
-    birthday:{type:String},
-    personadj:{type:String},
-    ability:{type:String},
-    hobby:{type:String},
-    story:{type:String},
-    others:{type:String}
-});
+import {ocmodel as alldata} from "./server-c.js";
 mongoose.connect(uri);
 const status=mongoose.connection;
-const alldata=mongoose.model("ocdatas",ocdata);
 oclink.post("/api/characters",async(req,res)=>{
         const linkeddata=await alldata.find();
         res.type("application/json");
