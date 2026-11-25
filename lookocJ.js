@@ -34,7 +34,7 @@ let thecha={
     else
     {
         const oc=await response.json();
-        if(Object.values(oc)[1]==="")
+        if(Object.values(oc)[0]==="")
         {
             img.style.display="none";
             nopicture.style.width="300px";
@@ -42,15 +42,15 @@ let thecha={
             nopicture.style.display="block";
             nopicture.style.backgroundColor=`rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`;
         }
-        else if(Object.values(oc)[1]!=="")
+        else if(Object.values(oc)[0]!=="")
         {
             img.style.diaplay="block";
             nopicture.style.display="none";
-            img.src=Object.values(oc)[1];
+            img.src=Object.values(oc)[0];
         }
 
-        ocname.innerText=Object.values(oc)[3];
-        user.innerText="by:  "+Object.values(oc)[2];
+        ocname.innerText=Object.values(oc)[4];
+        user.innerText="by:  "+Object.values(oc)[3];
         for(let i=0;i<=6;i=i+1)
         {
             but[i].addEventListener("click",function(){
@@ -59,7 +59,7 @@ let thecha={
                     but[which].style.border="none";
                     but[i].style.border="3px solid rgb(19,168,111)";
                     but[i].style.cursor="default";
-                    text.innerText=Object.values(oc)[i+4];
+                    text.innerText=Object.values(oc)[i+5];
                     if(text.innerText==="")
                     {
                         text.style.display="none";
