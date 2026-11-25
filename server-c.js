@@ -63,7 +63,7 @@ savedata.post("/api/savedata",async(req,res)=>{
         res.status(500).json({success:false,message:"失敗 "+error});
     }
 });
-export savedata as C;
+export {savedata as C};
 status.on("error",function(){
     console.log("資料庫連線失敗");
 });
