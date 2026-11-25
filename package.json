@@ -10,7 +10,14 @@
   "main": "index.js",
   "scripts": {
     "build":"npm install",
-    "start":"node server.js"
+    "start:a":"node server-a.js",
+    "start:b":"node server-b.js",
+    "start:c":"node server-c.js",
+    "start:d":"node server-d.js",
+    "start:f":"node server-f.js",
+    "start:g":"node server-g.js",
+    "start:i":"node server-i.js",
+    "start:j":"node server-j.js"
   },
   "dependencies": {
     "acorn": "^8.14.0",
