@@ -46,7 +46,7 @@ let thecha={
         {
             img.style.diaplay="block";
             nopicture.style.display="none";
-            img.src=Object.values(oc)[0];
+            img.src=Object.values(oc)[1];
         }
 
         ocname.innerText=Object.values(oc)[3];
