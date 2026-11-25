@@ -1,6 +1,6 @@
 const signup=document.querySelector(".signup");
 signup.addEventListener("click",function(){
-	window.location.assign("/signupH.html");
+	window.location.assign("signupH.html");
 });
 document.querySelector("#thelogin").addEventListener("submit",function(event){
 	event.preventDefault();
@@ -40,7 +40,7 @@ document.querySelector("#thelogin").addEventListener("submit",function(event){
 				else if(retext==="SUCCESS")
 				{
 					document.cookie="username="+encodeURIComponent(account.value)+";max-age="+(60*60*24*3)+";path=/";
-					window.location.assign("/homepageH.html");
+					window.location.assign("homepageH.html");
 				}
 			})();
 		}
