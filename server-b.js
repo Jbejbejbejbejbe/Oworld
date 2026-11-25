@@ -131,7 +131,7 @@ ex.post("/api/sendchat",async(req,res)=>{
         res.status(500).json({success:false,message:"失敗 "+error});
     }
 });
-export ex as B;
+export {ex as B};
 status.on("error",function(){
     console.log("資料庫連線失敗");
 });
