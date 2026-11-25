@@ -5,27 +5,9 @@ import dotenv from "dotenv";
 dotenv.config();
 const lookoc=express.Router();
 const uri=process.env.MONGODBLINK;
-const ocdata=new mongoose.Schema({
-    picture:{type:String},
-    user:{
-        type:String,
-        required:true
-    },
-    name:{
-        type:String,
-        required:true
-    },
-    gender:{type:String},
-    birthday:{type:String},
-    presonadj:{type:String},
-    hobby:{type:String},
-    ability:{type:String},
-    story:{type:String},
-    others:{type:String}
-});
+import {ocmodel} from "./server-c.js"
 mongoose.connect(uri);
 const status=mongoose.connection;
-const ocmodel=mongoose.model("ocdatas",ocdata);
 lookoc.post("/api/readalldata",async(req,res)=>{
     try
     {
