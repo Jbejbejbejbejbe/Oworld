@@ -22,6 +22,7 @@ const aandp=new mongoose.Schema({username:{
 mongoose.connect(uri);
 const themongoose=mongoose.connection;
 const AP=mongoose.model("AcAndPass",aandp);
+export {AP};
 login.post("/api/checklogin",async(req,res)=>{
         try
         {
