@@ -33,7 +33,7 @@ getdata.post("/api/useroc",async(req,res)=>{
     }).select("picture user name");
     res.send(alluseroc);
 });
-export getdata as J;
+export {getdata as J};
 status.on("error",function(){
     console.log("資料庫連線失敗");
 });
