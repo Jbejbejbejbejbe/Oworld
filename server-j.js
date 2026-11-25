@@ -4,7 +4,6 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 const uri=process.env.MONGODBLINK;
-const port=process.env.PORT;
 const ocdata=new mongoose.Schema({
     picture:{type:String},
     user:{
@@ -23,9 +22,7 @@ const ocdata=new mongoose.Schema({
     story:{type:String},
     others:{type:String}
 });
-const getdata=express();
-getdata.use(cors());
-getdata.use(express.text());
+const getdata=express.Router();
 mongoose.connect(uri);
 const status=mongoose.connection;
 const ocmodel=mongoose.model("ocdatas",ocdata);
@@ -36,12 +33,10 @@ getdata.post("/api/useroc",async(req,res)=>{
     }).select("picture user name");
     res.send(alluseroc);
 });
+export getdata as J;
 status.on("error",function(){
     console.log("資料庫連線失敗");
 });
 status.once("open",function(){
     console.log("資料庫連線成功");
-    getdata.listen(port,"0.0.0.0",function(){
-        console.log("於埠啟動了");
-    });
 });
