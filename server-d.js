@@ -5,8 +5,7 @@ import mongoose from "mongoose";
 dotenv.config();
 const uri=process.env.MONGODBLINK;
 const port=process.env.PORT;
-const oclink=express();
-oclink.use(cors());
+const oclink=express.Routers();
 const ocdata=new mongoose.Schema({
     picture:{type:String},
     user:{
@@ -33,12 +32,10 @@ oclink.post("/api/characters",async(req,res)=>{
         res.type("application/json");
         res.send(JSON.stringify(linkeddata));
 });
+export oclink as D;
 status.on("error",function(){
     console.log("資料庫連線失敗");
 });
 status.once("open",function(){
     console.log("資料庫連線成功");
-    oclink.listen(port,"0.0.0.0",()=>{
-        console.log("我在3001埠");
-    });
 });
