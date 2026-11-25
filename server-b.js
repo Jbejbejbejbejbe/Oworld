@@ -41,7 +41,7 @@ ex.post("/api/allchat",async(req,res)=>{
         });
         for(let i=0;i<=allchatdata.length-1;i=i+1)
         {
-            if(allchatdata[i].picture===undefined&&allchatdata[i].useroroc==="oc")
+            if(Object.hasOwn(alldata[i],picture)&&allchatdata[i].useroroc==="oc")
             {
                 newphoto[i]=await ocmodel.find({
                     user:{$in:[inworld.user]},
