@@ -6,7 +6,7 @@ const message=document.querySelector("#message");
 const con=document.querySelector(".con");
 document.title=sessionStorage.getItem("world");
 back.addEventListener("click",function(){
-    window.location.assign("/allchatH.html");
+    window.location.assign("allchatH.html");
 });
 const sleep=(ms)=>new Promise(
     resolve=>setTimeout(resolve,ms)
