@@ -4,28 +4,10 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 const uri=process.env.MONGODBLINK;
-const ocdata=new mongoose.Schema({
-    picture:{type:String},
-    user:{
-        type:String,
-        required:true
-    },
-    name:{
-        type:String,
-        required:true
-    },
-    gender:{type:String},
-    birthday:{type:String},
-    personadj:{type:String},
-    hobby:{type:String},
-    ability:{type:String},
-    story:{type:String},
-    others:{type:String}
-});
 const getdata=express.Router();
 mongoose.connect(uri);
 const status=mongoose.connection;
-const ocmodel=mongoose.model("ocdatas",ocdata);
+import {ocmodel} from "./server-c.js";
 getdata.post("/api/useroc",async(req,res)=>{
     const usinguser=req.body;
     const alluseroc=await ocmodel.find({
