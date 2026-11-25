@@ -9,6 +9,7 @@ lookoc.use(express.static("public"));
 lookoc.use(express.json());
 lookoc.use(express.urlencoded({extended:true}));
 const uri=process.env.MONGODBLINK;
+const port=process.env.PORT;
 const ocdata=new mongoose.Schema({
     picture:{type:String},
     user:{
@@ -51,7 +52,7 @@ status.on("error",function(){
 });
 status.once("open",function(){
     console.log("資料庫連線成功");
-    lookoc.listen(3012,"127.0.0.1",function(){
+    lookoc.listen(port,"0.0.0.0",function(){
         console.log("在3012埠啟動了");
     });
 });
