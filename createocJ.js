@@ -50,6 +50,10 @@ oneocdata.addEventListener("submit",async(event)=>{
             }
             databig.picture=url;
         }
+        else
+        {
+             databig.picture="";
+        }
         databig.username=document.cookie;
         databig.name=datalist[0];
         databig.gender=datalist[1];
