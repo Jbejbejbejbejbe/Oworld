@@ -20,7 +20,7 @@ function putchat(thename)
         if(writing===false)
         {
             sessionStorage.setItem("world",thename);
-            window.top.location.assign("/chat/chatH.html");
+            window.top.location.assign("/chatH.html");
         }
     });
     chatnamecount=chatnamecount+1;
