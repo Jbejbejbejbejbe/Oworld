@@ -21,7 +21,7 @@ userpart.addEventListener("mouseover",function(){
         console.log("AA");
         document.cookie=`username=${document.cookie.split("=")[1]};path=/;max-age=0;`
         console.log(document.cookie);
-        window.top.location.assign("/login/loginH.html");
+        window.top.location.assign("/loginH.html");
     });
     }
 });
