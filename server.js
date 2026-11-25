@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 const uri=process.env.MONGODBLINK;
+const port=process.env.PORT;
 const ocdata=new mongoose.Schema({
     picture:{type:String},
     user:{
