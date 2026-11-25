@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
-const login=express().Router;
+const login=express.Router();
 const uri=process.env.MONGODBLINK;
 const aandp=new mongoose.Schema({username:{
     type:String,
