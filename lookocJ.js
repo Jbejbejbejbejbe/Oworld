@@ -59,7 +59,7 @@ let thecha={
                     but[which].style.border="none";
                     but[i].style.border="3px solid rgb(19,168,111)";
                     but[i].style.cursor="default";
-                    text.innerText=Object.values(oc)[i+4];
+                    text.innerText=Object.values(oc)[i+3];
                     if(text.innerText==="")
                     {
                         text.style.display="none";
