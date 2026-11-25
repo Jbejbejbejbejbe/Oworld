@@ -6,24 +6,7 @@ dotenv.config();
 const uri=process.env.MONGODBLINK;
 const port=process.env.PORT;
 const ex=express.Router();
-const oc=new mongoose.Schema({
-    picture:{type:String},
-    user:{
-        type:String,
-        required:true
-    },
-    name:{
-        type:String,
-        required:true
-    },
-    gender:{type:String},
-    birthday:{type:String},
-    personadj:{type:String},
-    hobby:{type:String},
-    ability:{type:String},
-    story:{type:String},
-    others:{type:String}
-});
+import {ocmodel as oc} from "./server-c.js";
 const message=new mongoose.Schema({
     picture:{type:String},
     speaker:{
@@ -46,7 +29,7 @@ const message=new mongoose.Schema({
 mongoose.connect(uri);
 const status=mongoose.connection;
 const chatmodel=mongoose.model("chatlist",message);
-const ocmodel=mongoose.model("ocdatas",oc);
+export {chatmodel};
 let user="";
 ex.post("/api/allchat",async(req,res)=>{
     try
