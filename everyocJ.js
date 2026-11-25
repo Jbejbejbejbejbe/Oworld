@@ -1,6 +1,6 @@
 let oclist=[];
 (async()=>{
-    const response=await fetch("http://localhost:3001/api/characters",{
+    const response=await fetch("https://oworld.onrender.com/api/characters",{
         method:"POST",
     });
     if(!response.ok)
@@ -51,7 +51,7 @@ let oclist=[];
                     name.addEventListener("click",function(){
                         sessionStorage.setItem("theuser",allocjs[(i-1)*5+j].user);
                         sessionStorage.setItem("thename",allocjs[(i-1)*5+j].name);
-                        window.top.location.assign("/lookoc/lookocH.html");
+                        window.top.location.assign("/lookocH.html");
                     });
                 }
             }
