@@ -6,6 +6,7 @@ const signup=express();
 import dotenv from "dotenv";
 dotenv.config();
 const uri=process.env.MONGODBLINK;
+const port=process.env.PORT;
 const S=mongoose.Schema;
 const aandp=new S({
     username:{
@@ -76,11 +77,9 @@ checkas.once("open",function(){
 
     console.log("資料庫在確認帳號時連線成功");
     console.log("資料庫連線成功");
-    signup.listen(3005,"127.0.0.1",()=>{
+    signup.listen(port,"0.0.0.0",()=>{
     console.log("checka啟動了")
     });
-    signup.listen(3005,"127.0.0.1",()=>{
-    console.log("啟動了");
     });
 
 });
