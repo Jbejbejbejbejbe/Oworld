@@ -75,7 +75,7 @@ async function rundata()
                                 };
                                 sessionStorage.setItem("theuser",ocscript[(j-1)*5+i].user);
                                 sessionStorage.setItem("thename",ocscript[(j-1)*5+i].name);
-                                window.top.location.assign("/lookocH.html");
+                                window.top.location.assign("lookocH.html");
                             });
                         }
                         allcha[j].classList.add("allcha");
