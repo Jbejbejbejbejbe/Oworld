@@ -4,9 +4,8 @@ import bcrypt from "bcrypt";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
-const login=express();
+const login=express().Router;
 const uri=process.env.MONGODBLINK;
-const port=process.env.PORT;
 login.use(cors());
 login.use(express.json());
 login.use(express.static("public"));
@@ -57,13 +56,11 @@ login.post("/api/checklogin",async(req,res)=>{
             res.status(500).json({success:false,message:"失敗 "+error});
         }
 });
+export login as F;
 themongoose.on("error",function(){
     console.log("資料庫連線失敗");
 });
 themongoose.once("open",function(){
     console.log("資料庫連線成功");
-    login.listen(port,"0.0.0.0",()=>{
-    console.log("啟動了");
-});
 });
 
