@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 const uri=process.env.MONGODBLINK;
+const port=process.env.PORT;
 const chatname=new mongoose.Schema({
     name:{
         type:String,
@@ -47,7 +48,7 @@ status.on("error",function(){
 });
 status.once("open",function(){
     console.log("資料庫連線成功");
-    ex.listen(3011,"127.0.0.1",function(){
-        console.log("search啟動於3011埠");
+    ex.listen(port,"0.0.0.0",function(){
+        console.log("search啟動於埠");
     });
 });
