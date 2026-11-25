@@ -26,6 +26,6 @@ const port=process.env.PORT;
 listengo.get("/",async function(req,res){
   console.log("正常");
 });
-listengo.listen(port,funtion(req,res){
+listengo.listen(port,()=>{
   console.log("啟動了");
 });
