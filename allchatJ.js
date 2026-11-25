@@ -20,7 +20,7 @@ function putchat(thename)
         if(writing===false)
         {
             sessionStorage.setItem("world",thename);
-            window.top.location.assign("chatH.html");
+            window.top.location.assign("https://jbejbejbejbejbe.github.io/Oworld/chatH.html");
         }
     });
     chatnamecount=chatnamecount+1;
