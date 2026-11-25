@@ -7,23 +7,9 @@ import dotenv from "dotenv";
 dotenv.config();
 const uri=process.env.MONGODBLINK;
 const S=mongoose.Schema;
-const aandp=new S({
-    username:{
-        type:String,
-        required:true
-    },
-    password:{
-        type:String,
-        required:true
-    },
-    salt:{
-        type:Number,
-        required:true
-    }
-});
+import {AP} from "./server-f.js";
 mongoose.connect(uri);
 const checkas=mongoose.connection;
-const AP=mongoose.model("AcAndPass",aandp);
 signup.post("/api/checkaccount",async(req,res)=>{
 
         try
