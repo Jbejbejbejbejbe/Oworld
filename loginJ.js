@@ -1,6 +1,6 @@
 const signup=document.querySelector(".signup");
 signup.addEventListener("click",function(){
-	window.location.assign("file:///C:/Users/Nora/Documents/Oworld/signup/signupH.html");
+	window.location.assign("/signup/signupH.html");
 });
 document.querySelector("#thelogin").addEventListener("submit",function(event){
 	event.preventDefault();
@@ -23,7 +23,7 @@ document.querySelector("#thelogin").addEventListener("submit",function(event){
 					"username":account.value,
 					"password":password.value
 				};
-				const response=await fetch("http://localhost:3002/api/checklogin",{
+				const response=await fetch("https://oworld.onrender.com",{
 					method:"POST",
 					headers:{"Content-Type":"application/json"},
 					body:JSON.stringify(logindata)
