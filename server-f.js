@@ -23,7 +23,7 @@ const aandp=new mongoose.Schema({username:{
 mongoose.connect(uri);
 const themongoose=mongoose.connection;
 const AP=mongoose.model("AcAndPass",aandp);
-login.post("https://oworld.onrender.com",async(req,res)=>{
+login.post("/api/checklogin",async(req,res)=>{
         try
         {
             const {username,password}=req.body;
