@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const login=express();
 const uri=process.env.MONGODBLINK;
+const port=process.env.PORT;
 login.use(cors());
 login.use(express.json());
 login.use(express.static("public"));
@@ -61,7 +62,7 @@ themongoose.on("error",function(){
 });
 themongoose.once("open",function(){
     console.log("資料庫連線成功");
-    login.listen(3002,"127.0.0.1",()=>{
+    login.listen(port,"0.0.0.0",()=>{
     console.log("啟動了");
 });
 });
