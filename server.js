@@ -5,7 +5,7 @@ listengo.use(cors());
 listengo.use(express.json());
 listengo.use(express.text());
 listengo.use(express.urlencoded({extended:true}));
-listengo.use(express.static("public");
+listengo.use(express.static("public"));
 import A from "./server-a.js";
 import B from "./server-b.js";
 import C from "./server-c.js";
