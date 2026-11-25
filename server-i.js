@@ -63,7 +63,7 @@ signup.post("/api/userdata",async(req,res)=>{
         res.status(500).json({success:false,message:"失敗  "+error});
     }
 });
-export signup as I;
+export {signup as I};
 checkas.on("error",function(){
     console.log("資料庫在確認帳號時連線失敗");
 });
