@@ -41,7 +41,7 @@ ex.post("/api/setworld",async(req,res)=>{
     }  
     
 });
-export ex as A;
+export {ex as A};
 status.on("error",function(){
     console.log("資料庫連線失敗");
 });
