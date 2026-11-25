@@ -1,0 +1,31 @@
+import express from "express";
+import cors from "cors";
+const listengo=express();
+listengo.use(cors());
+listengo.use(express.json());
+listengo.use(express.text());
+listengo.use(express.urlencoded({extended:true}));
+listengo.use(express.static("public");
+import A from "./server-a.js";
+import B from "./server-b.js";
+import C from "./server-c.js";
+import D from "./server-d.js";
+import F from "./server-f.js";
+import G from "./server-g.js";
+import I from "./server-i.js";
+import J from "./server-j.js";
+listengo.use(A);
+listengo.use(B);
+listengo.use(C);
+listengo.use(D);
+listengo.use(F);
+listengo.use(G);
+listengo.use(I);
+listengo.use(J);
+const port=process.env.PORT;
+listengo.get("/",async function(req,res){
+  console.log("正常");
+});
+listengo.post(port,async funtion(req,res){
+  console.log("啟動了");
+});
