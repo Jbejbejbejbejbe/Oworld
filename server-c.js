@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const savedata=express();
 const uri=process.env.MONGODBLINK;
+const port=process.env.PORT;
 const ocdata=new mongoose.Schema({
     picture:{type:String},
     user:{
@@ -68,7 +69,7 @@ status.on("error",function(){
 });
 status.once("open",function(){
     console.log("資料庫連線成功");
-    savedata.listen(3000,"127.0.0.1",function(){
+    savedata.listen(port,"0.0.0.0",function(){
         console.log("啟動在3000埠");
     });
 });
