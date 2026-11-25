@@ -1,6 +1,6 @@
 const login=document.querySelector(".login");
 login.addEventListener("click",function(){
-	window.location.assign("/loginH.html");
+	window.location.assign("loginH.html");
 });
 let acname="";
 let pw="";
