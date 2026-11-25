@@ -6,7 +6,7 @@ const message=document.querySelector("#message");
 const con=document.querySelector(".con");
 document.title=sessionStorage.getItem("world");
 back.addEventListener("click",function(){
-    window.location.assign("/allchat/allchatH.html");
+    window.location.assign("/allchatH.html");
 });
 const sleep=(ms)=>new Promise(
     resolve=>setTimeout(resolve,ms)
@@ -95,7 +95,7 @@ function appendchat(thephoto,thespeaker,theuoro,themessage)
         world:sessionStorage.getItem("world"),
         user:usinguser
     };
-    const responseone=await fetch("http://localhost:3015/api/allchat",{
+    const responseone=await fetch("https://oworld.onrender.com/api/allchat",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify(sendall)
@@ -128,7 +128,7 @@ function appendchat(thephoto,thespeaker,theuoro,themessage)
                 world:sessionStorage.getItem("world"),
                 user:usinguser
             };
-            const resonetwo=await fetch("http://localhost:3015/api/allchat",{
+            const resonetwo=await fetch("https://oworld.onrender.com/api/allchat",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(sendalltwo)
@@ -161,7 +161,7 @@ function appendchat(thephoto,thespeaker,theuoro,themessage)
     }
 })();
 (async()=>{
-    const responsetwo=await fetch("http://localhost:3015/api/allspeakers",{
+    const responsetwo=await fetch("https://oworld.onrender.com/api/allspeakers",{
         method:"POST",
         headers:{"Content-Type":"text/plain"},
         body:document.cookie.split("=")[1]
@@ -192,7 +192,7 @@ message.addEventListener("submit",async function(event){
             world:sessionStorage.getItem("world"),
             user:usinguser
         };
-        const responsethree=await fetch("http://localhost:3015/api/sendchat",{
+        const responsethree=await fetch("https://oworld.onrender.com/api/sendchat",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(messagedata)
