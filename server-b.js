@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 const uri=process.env.MONGODBLINK;
+const port=process.env.PORT;
 const ex=express();
 ex.use(cors());
 ex.use(express.json());
@@ -140,7 +141,7 @@ status.on("error",function(){
 });
 status.once("open",function(){
     console.log("資料庫連線成功");
-    ex.listen(3015,"127.0.0.1",function(){
+    ex.listen(port,"0.0.0.0",function(){
         console.log("我chat在3015埠啟動了");
     });
 })
