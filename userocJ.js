@@ -7,7 +7,7 @@ let allcha=[];
 async function rundata()
 {
 
-            let response=await fetch("http://localhost:3018/api/useroc",{
+            let response=await fetch("https://oworld.onrender.com/api/useroc",{
                 method:"POST",
                 headers:{"Content-Type":"text/plain"},
                 body:document.cookie.split("=")[1]
@@ -75,7 +75,7 @@ async function rundata()
                                 };
                                 sessionStorage.setItem("theuser",ocscript[(j-1)*5+i].user);
                                 sessionStorage.setItem("thename",ocscript[(j-1)*5+i].name);
-                                window.top.location.assign("/lookoc/lookocH.html");
+                                window.top.location.assign("/lookocH.html");
                             });
                         }
                         allcha[j].classList.add("allcha");
@@ -96,7 +96,7 @@ create.addEventListener("click",function(){
             }
         }
         iframe=document.createElement("iframe");
-        iframe.src="/createoc/createocH.html";
+        iframe.src="/createocH.html";
         iframe.width="100%";
         iframe.height="700px";
         iframe.style.border="none";
