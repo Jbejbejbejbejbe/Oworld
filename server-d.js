@@ -32,7 +32,7 @@ oclink.post("/api/characters",async(req,res)=>{
         res.type("application/json");
         res.send(JSON.stringify(linkeddata));
 });
-export oclink as D;
+export {oclink as D};
 status.on("error",function(){
     console.log("資料庫連線失敗");
 });
