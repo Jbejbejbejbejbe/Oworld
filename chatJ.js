@@ -145,7 +145,7 @@ function appendchat(thephoto,thespeaker,theuoro,themessage)
                         {
                             resetneeded=true;
                         }
-                        if(reone[j].useroroc==="oc"&&reone[j].picture)
+                        if(reone[j].useroroc==="oc"&&Object.hasOwn(reone[j],picture))
                         {
                             appendchat(reone[j].picture,reone[j].speaker,reone[j].useroroc,reone[j].message);
                         }
