@@ -51,7 +51,7 @@ function appendchat(thephoto,thespeaker,theuoro,themessage)
     if(thespeaker!==select.value)
     {
         upperphone.appendChild(onmessage);
-        if(thephoto==="")
+        if(thephoto==="" || thephoto===undefined)
         {
             nopicture.classList.add("nopicture");
             nopicture.style.backgroundColor="rgb(130,130,130)";
