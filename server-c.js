@@ -46,7 +46,7 @@ savedata.post("/api/savedata",async(req,res)=>{
         }
         else if(count===9)
         {
-            save=new ocmodel({user:datalist[0].split("=")[1],name:datalist[1],gender:datalist[2],birthday:datalist[3],personadj:datalist[4],hobby:datalist[5],ability:datalist[6],story:datalist[7],others:datalist[8]}); 
+            save=new ocmodel({picture:"",user:datalist[0].split("=")[1],name:datalist[1],gender:datalist[2],birthday:datalist[3],personadj:datalist[4],hobby:datalist[5],ability:datalist[6],story:datalist[7],others:datalist[8]}); 
         }
         else
         {
