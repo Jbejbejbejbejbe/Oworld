@@ -5,12 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const uri=process.env.MONGODBLINK;
 const port=process.env.PORT;
-const ex=express();
-ex.use(cors());
-ex.use(express.json());
-ex.use(express.urlencoded({extended:true}));
-ex.use(express.static("public"));
-ex.use(express.text());
+const ex=express.Router();
 const oc=new mongoose.Schema({
     picture:{type:String},
     user:{
@@ -136,12 +131,10 @@ ex.post("/api/sendchat",async(req,res)=>{
         res.status(500).json({success:false,message:"失敗 "+error});
     }
 });
+export ex as B;
 status.on("error",function(){
     console.log("資料庫連線失敗");
 });
 status.once("open",function(){
     console.log("資料庫連線成功");
-    ex.listen(port,"0.0.0.0",function(){
-        console.log("我chat在3015埠啟動了");
-    });
 })
