@@ -1,6 +1,6 @@
 const login=document.querySelector(".login");
 login.addEventListener("click",function(){
-	window.location.assign("https://jbejbejbejbejbe.github.io/Oworld/loginH.html");
+	window.location.assign("https://jbejbejbejbejbe.github.io/Oworld/index.html");
 });
 let acname="";
 let pw="";
@@ -62,6 +62,7 @@ document.querySelector("#userdata").addEventListener("submit",function(event){
 							if(ther.ok)
 							{
 								console.log("上傳至server.js成功");
+								window.top.location.assign("https://jbejbejbejbejbe.github.io/Oworld/index.html");
 						
 							}
 							else
