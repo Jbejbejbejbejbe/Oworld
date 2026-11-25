@@ -51,7 +51,7 @@ let oclist=[];
                     name.addEventListener("click",function(){
                         sessionStorage.setItem("theuser",allocjs[(i-1)*5+j].user);
                         sessionStorage.setItem("thename",allocjs[(i-1)*5+j].name);
-                        window.top.location.assign("lookocH.html");
+                        window.top.location.assign("https://jbejbejbejbejbe.github.io/Oworld/lookocH.html");
                     });
                 }
             }
