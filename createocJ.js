@@ -59,7 +59,7 @@ oneocdata.addEventListener("submit",async(event)=>{
         databig.ability=datalist[5];
         databig.story=datalist[6];
         databig.others=datalist[7];
-        const response=await fetch("http://localhost:3000/api/savedata",{
+        const response=await fetch("https://oworld.onrender.com/api/savedata",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(databig)
