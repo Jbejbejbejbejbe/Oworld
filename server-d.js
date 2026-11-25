@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 dotenv.config();
 const uri=process.env.MONGODBLINK;
 const port=process.env.PORT;
-const oclink=express.Routers();
+const oclink=express.Router();
 import {ocmodel as alldata} from "./server-c.js";
 mongoose.connect(uri);
 const status=mongoose.connection;
