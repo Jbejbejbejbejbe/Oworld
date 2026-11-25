@@ -6,9 +6,6 @@ import dotenv from "dotenv";
 dotenv.config();
 const login=express().Router;
 const uri=process.env.MONGODBLINK;
-login.use(cors());
-login.use(express.json());
-login.use(express.static("public"));
 const aandp=new mongoose.Schema({username:{
     type:String,
     required:true
