@@ -6,7 +6,7 @@ dotenv.config();
 const uri=process.env.MONGODBLINK;
 const port=process.env.PORT;
 const ex=express.Router();
-import {ocmodel as oc} from "./server-c.js";
+import {ocmodel} from "./server-c.js";
 const message=new mongoose.Schema({
     picture:{type:String},
     speaker:{
