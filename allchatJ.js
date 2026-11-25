@@ -67,7 +67,7 @@ addchat.addEventListener("click",function(){
 });
 async function putallchat()
 {
-    const responseget=await fetch("http://localhost:3011/api/getworld",{
+    const responseget=await fetch("https://oworld.onrender.com",{
         method:"POST",
     });
     if(!responseget.ok)
@@ -110,7 +110,7 @@ newchatname.addEventListener("submit",async function(event){
     }
     else if(nametext.value!=="")
     {
-        const responsesend=await fetch("http://localhost:3011/api/setworld",{
+        const responsesend=await fetch("https://oworld.onrender.com",{
             method:"POST",
             headers:{"Content-Type":"text/plain"},
             body:nametext.value
