@@ -32,6 +32,7 @@ savedata.use(express.urlencoded({extended:true}));
 mongoose.connect(uri);
 const status=mongoose.connection;
 const ocmodel=mongoose.model("ocdatas",ocdata);
+export {ocmodel};
 savedata.post("/api/savedata",async(req,res)=>{
     try
     {
