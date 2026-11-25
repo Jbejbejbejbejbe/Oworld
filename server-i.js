@@ -2,11 +2,10 @@ import express from "express";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import cors from "cors";
-const signup=express();
+const signup=express.Router();
 import dotenv from "dotenv";
 dotenv.config();
 const uri=process.env.MONGODBLINK;
-const port=process.env.PORT;
 const S=mongoose.Schema;
 const aandp=new S({
     username:{
@@ -22,11 +21,6 @@ const aandp=new S({
         required:true
     }
 });
-signup.use(cors());
-signup.use(express.static("public"));
-signup.use(express.json());
-signup.use(express.urlencoded({extended:true}));
-signup.use(express.text());
 mongoose.connect(uri);
 const checkas=mongoose.connection;
 const AP=mongoose.model("AcAndPass",aandp);
@@ -69,7 +63,7 @@ signup.post("/api/userdata",async(req,res)=>{
         res.status(500).json({success:false,message:"失敗  "+error});
     }
 });
-
+export signup as I;
 checkas.on("error",function(){
     console.log("資料庫在確認帳號時連線失敗");
 });
@@ -77,9 +71,6 @@ checkas.once("open",function(){
 
     console.log("資料庫在確認帳號時連線成功");
     console.log("資料庫連線成功");
-    signup.listen(port,"0.0.0.0",()=>{
-    console.log("checka啟動了");
-    });
 
 });
 
