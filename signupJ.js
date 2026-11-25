@@ -1,6 +1,6 @@
 const login=document.querySelector(".login");
 login.addEventListener("click",function(){
-	window.location.assign("file:///C:/Users/Nora/Documents/Oworld/login/loginH.html");
+	window.location.assign("/loginH.html");
 });
 let acname="";
 let pw="";
@@ -36,7 +36,7 @@ document.querySelector("#userdata").addEventListener("submit",function(event){
 				(async()=>{
 					try
 					{
-						const response=await fetch("http://localhost:3005/api/checkaccount",{
+						const response=await fetch("https://oworld.onrender.com/api/checkaccount",{
 							method:"POST",
 							headers:{"Content-Type":"text/plain"},
 							body:accountname.value
@@ -54,7 +54,7 @@ document.querySelector("#userdata").addEventListener("submit",function(event){
 								"username":accountname.value,
 								"password":password.value
 							};
-							const ther=await fetch("http://localhost:3005/api/userdata",{
+							const ther=await fetch("https://oworld.onrender.com/api/userdata",{
 								method:"POST",
 								headers:{"Content-Type":"application/json"},
 								body:JSON.stringify(alldata)
