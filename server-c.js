@@ -4,9 +4,8 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
-const savedata=express();
-const uri=process.env.MONGODBLINK;
-const port=process.env.PORT;
+const savedata=express.Router();
+const uri=process.env.MONGODBLINK;;
 const ocdata=new mongoose.Schema({
     picture:{type:String},
     user:{
@@ -64,12 +63,10 @@ savedata.post("/api/savedata",async(req,res)=>{
         res.status(500).json({success:false,message:"失敗 "+error});
     }
 });
+export savedata as C;
 status.on("error",function(){
     console.log("資料庫連線失敗");
 });
 status.once("open",function(){
     console.log("資料庫連線成功");
-    savedata.listen(port,"0.0.0.0",function(){
-        console.log("啟動在3000埠");
-    });
 });
