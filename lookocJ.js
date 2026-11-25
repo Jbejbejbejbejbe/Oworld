@@ -76,7 +76,7 @@ let thecha={
         {
             but[0].style.border="3px solid rgb(19,168,111)";
             but[0].style.cursor="default";
-            text.innerText=Object.values(oc)[5];
+            text.innerText=Object.values(oc)[4];
         }
     }
 })();
