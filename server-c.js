@@ -25,10 +25,6 @@ const ocdata=new mongoose.Schema({
     others:{type:String}
 });
 let save="";
-savedata.use(cors());
-savedata.use(express.static("public"));
-savedata.use(express.json());
-savedata.use(express.urlencoded({extended:true}));
 mongoose.connect(uri);
 const status=mongoose.connection;
 const ocmodel=mongoose.model("ocdatas",ocdata);
