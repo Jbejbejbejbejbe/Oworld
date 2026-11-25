@@ -1,6 +1,6 @@
 const signup=document.querySelector(".signup");
 signup.addEventListener("click",function(){
-	window.location.assign("signupH.html");
+	window.location.assign("https://jbejbejbejbejbe.github.io/Oworld/signupH.html");
 });
 document.querySelector("#thelogin").addEventListener("submit",function(event){
 	event.preventDefault();
