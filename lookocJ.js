@@ -20,7 +20,7 @@ let thecha={
 
 (async()=>{
     console.log(thecha);
-    const response=await fetch("http://localhost:3012/api/readalldata",{
+    const response=await fetch("https://oworld.onrender.com/api/readalldata",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify(thecha)
