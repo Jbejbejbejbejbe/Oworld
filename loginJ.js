@@ -23,7 +23,7 @@ document.querySelector("#thelogin").addEventListener("submit",function(event){
 					"username":account.value,
 					"password":password.value
 				};
-				const response=await fetch("https://oworld.onrender.com",{
+				const response=await fetch("https://oworld.onrender.com/login",{
 					method:"POST",
 					headers:{"Content-Type":"application/json"},
 					body:JSON.stringify(logindata)
