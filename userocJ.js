@@ -96,7 +96,7 @@ create.addEventListener("click",function(){
             }
         }
         iframe=document.createElement("iframe");
-        iframe.src="/createocH.html";
+        iframe.src="https://jbejbejbejbejbe.github.io/Oworld/createocH.html";
         iframe.width="100%";
         iframe.height="700px";
         iframe.style.border="none";
