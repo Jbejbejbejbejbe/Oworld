@@ -78,8 +78,7 @@ checkas.once("open",function(){
     console.log("資料庫在確認帳號時連線成功");
     console.log("資料庫連線成功");
     signup.listen(port,"0.0.0.0",()=>{
-    console.log("checka啟動了")
-    });
+    console.log("checka啟動了");
     });
 
 });
