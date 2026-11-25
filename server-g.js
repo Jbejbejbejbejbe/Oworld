@@ -42,7 +42,7 @@ lookoc.post("/api/readalldata",async(req,res)=>{
         res.status(500).json({success:false,message:"失敗 "+error.message});
     }
 });
-export lookoc as G;
+export {lookoc as G};
 status.on("error",function(){
     console.log("資料庫連線失敗");
 });
