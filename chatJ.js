@@ -16,6 +16,30 @@ let chatcount=0;
 let reone="";
 let resetneeded=false;
 const usinguser=document.cookie.split("=")[1];
+let comendtime=0;
+con.addEventListener("compositionend",function(event){
+    comendtime=event.timeStamp;
+});
+con.addEventListener("keydown",function(event){
+    if(event.key!=="Enter")
+    {
+        return;
+    }
+    if(event.shiftKey)
+    {
+        return;
+    }
+    if(event.isComposing)
+    {
+        return;
+    }
+    if(event.timeStamp-comendtime<50)
+    {
+        return;
+    }
+    event.preventDefault();
+    message.requestSubmit();
+});
 function appendchat(thephoto,thespeaker,theuoro,themessage)
 {
     if(chatcount>0&&resetneeded===true)
