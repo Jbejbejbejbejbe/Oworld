@@ -21,7 +21,7 @@ let oclist=[];
                 {
                     const cha=document.createElement("div");
                     cha.classList.add("cha");
-                    cha.style.top=`${190+(i-1)*29}px`;
+                    cha.style.top=`${190+(i-1)*360}px`;
                     oclist[i-1].appendChild(cha);
                     const photo=document.createElement("div");
                     const img=document.createElement("img");
